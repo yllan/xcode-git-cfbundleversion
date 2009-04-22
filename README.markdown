@@ -15,7 +15,7 @@ How to use
 Requirements
 ------------
 
-You need to install osx-plist ruby gem. This is because new Xcode (no idea since when) will save Info.plist in binary plist format. If you try to  manipulate them directly as plaintext, your Info.plist will become junk.
+You need to install osx-plist ruby gem. This is because new Xcode (no idea since when) will save Info.plist in binary plist format. If you try to manipulate it directly as plaintext, your Info.plist will become junk.
 
     $ [sudo] gem sources -a http://gems.github.com/ (you only need to do this once)
     $ [sudo] gem install kballard-osx-plist
