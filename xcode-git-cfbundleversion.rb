@@ -1,5 +1,6 @@
 # xcode-git-cfbundleversion.rb
 # Update CFBundleVersion in Info.plist file with short Git revision string
+# http://github.com/digdog/xcode-git-cfbundleversion/
 #
 # This is based on
 # http://www.codecollector.net/view/1736/Bazaar_revno_build_phase_script
