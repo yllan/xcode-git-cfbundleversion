@@ -12,14 +12,6 @@ How to use
 4. Paste the script body into the Script text area
 5. Ensure that the build phase is at the end of the target's list of build phases
 
-Requirements
-------------
-
-You need to install osx-plist ruby gem. This is because new Xcode (no idea since when) will save Info.plist in binary plist format. If you try to manipulate it directly as plaintext, your Info.plist will become junk.
-
-    $ [sudo] gem sources -a http://gems.github.com/ (you only need to do this once)
-    $ [sudo] gem install kballard-osx-plist
-
 Credits to
 ----------
 
