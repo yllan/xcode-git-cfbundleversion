@@ -12,11 +12,10 @@ How to use
 4. Paste the script body into the Script text area
 5. Ensure that the build phase is at the end of the target's list of build phases
 
-Credits to
+References
 ----------
 
 This script is based on following people's works:
 
-* [http://www.codecollector.net/view/1736/Bazaar_revno_build_phase_script](http://www.codecollector.net/view/1736/Bazaar_revno_build_phase_script)
 * [http://github.com/jsallis/xcode-git-versioner](http://github.com/jsallis/xcode-git-versioner)
 * [http://github.com/juretta/iphone-project-tools/tree/v1.0.3](http://github.com/juretta/iphone-project-tools/tree/v1.0.3)
