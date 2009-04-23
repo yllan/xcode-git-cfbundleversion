@@ -26,6 +26,9 @@ lines.gsub! /(<key>CFBundleVersion<\/key>\n\t<string>).*?(<\/string>)/, "\\1#{re
 # Overwrite the original Info.plist file with our updated version
 File.open(plistFile, 'w') {|f| f.puts lines}
 
+# Convert back to binary plist
+`/usr/bin/plutil -convert binary1 #{plistFile}`
+
 # Report to the user
 puts "CFBundleVersion in #{plistFile} sets to '#{revision}'"
 
