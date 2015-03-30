@@ -11,7 +11,7 @@
 raise "Must be run from Xcode's Run Script Build Phase" unless ENV['XCODE_VERSION_ACTUAL']
 
 # Get the current git revision hash
-revision = `/opt/local/bin/git rev-parse --short HEAD`.chomp!
+revision = `/usr/bin/git rev-parse --short HEAD`.chomp!
 
 # Update Info.plist file
 plistFile = File.join(ENV['BUILT_PRODUCTS_DIR'], ENV['INFOPLIST_PATH'])
@@ -22,7 +22,7 @@ plistFile = File.join(ENV['BUILT_PRODUCTS_DIR'], ENV['INFOPLIST_PATH'])
 # Open Info.plist and set the CFBundleVersion value to the revision hash
 lines = IO.readlines(plistFile).join
 lines.gsub! /(<key>CFBundleVersion<\/key>\n\t<string>).*?(<\/string>)/, "\\1#{ENV['CURRENT_PROJECT_VERSION']}-#{revision}\\2"
- 
+
 # Overwrite the original Info.plist file with our updated version
 File.open(plistFile, 'w') {|f| f.puts lines}
 
@@ -31,4 +31,3 @@ File.open(plistFile, 'w') {|f| f.puts lines}
 
 # Report to the user
 puts "CFBundleVersion in #{plistFile} sets to '#{revision}'"
-
